@@ -32,8 +32,8 @@ Passionate about building scalable web applications, contributing to open-source
 
 ## 🌐 Portfolio
 
-[![Aditya Raj Portfolio](https://raw.githubusercontent.com/AdityaRaj-DE/AdityaRaj-DE/main/assets/portfolio-preview.png)](https://portfolio-aditya-raj.vercel.app/)
-> Click the image to visit my portfolio: [portfolio-aditya-raj.vercel.app](https://portfolio-aditya-raj.vercel.app/)
+check out my portfolio > [![Aditya Raj Portfolio](https://raw.githubusercontent.com/AdityaRaj-DE/AdityaRaj-DE/main/assets/portfolio-preview.png)](https://portfolio-aditya-raj.vercel.app/)
+
 
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
