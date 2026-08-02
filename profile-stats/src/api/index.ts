@@ -10,6 +10,10 @@ app.get('/health', (req, res) => {
   res.send('OK');
 });
 
-app.listen(config.port, () => {
-  console.log(`Profile Stats Service running on port ${config.port}`);
-});
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  app.listen(config.port, () => {
+    console.log(`Profile Stats Service running on port ${config.port}`);
+  });
+}
+
+export default app;
