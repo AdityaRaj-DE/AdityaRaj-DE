@@ -31,25 +31,33 @@ export function renderStatsCard(stats: GitHubStats, options: CardOptions): strin
       <text x="25" y="35" class="header">${stats.name}'s GitHub Stats</text>
       
       <g transform="translate(0, 55)">
-        <g class="stagger" style="animation-delay: 150ms" transform="translate(0, 0)">
-          ${drawIcon(iconPaths.star)}
-          <text class="stat" x="${textX}" y="12.5">Total Stars:</text>
-          <text class="stat" x="170" y="12.5" font-weight="600">${stats.totalStars}</text>
+        <g transform="translate(0, 0)">
+          <g class="stagger" style="animation-delay: 150ms">
+            ${drawIcon(iconPaths.star)}
+            <text class="stat" x="${textX}" y="12.5">Total Stars:</text>
+            <text class="stat" x="170" y="12.5" font-weight="600">${stats.totalStars}</text>
+          </g>
         </g>
-        <g class="stagger" style="animation-delay: 300ms" transform="translate(0, 30)">
-          ${drawIcon(iconPaths.commits)}
-          <text class="stat" x="${textX}" y="12.5">Total Commits:</text>
-          <text class="stat" x="170" y="12.5" font-weight="600">${stats.totalCommits}</text>
+        <g transform="translate(0, 30)">
+          <g class="stagger" style="animation-delay: 300ms">
+            ${drawIcon(iconPaths.commits)}
+            <text class="stat" x="${textX}" y="12.5">Total Commits:</text>
+            <text class="stat" x="170" y="12.5" font-weight="600">${stats.totalCommits}</text>
+          </g>
         </g>
-        <g class="stagger" style="animation-delay: 450ms" transform="translate(0, 60)">
-          ${drawIcon(iconPaths.repos)}
-          <text class="stat" x="${textX}" y="12.5">Total Repositories:</text>
-          <text class="stat" x="170" y="12.5" font-weight="600">${stats.totalRepositories}</text>
+        <g transform="translate(0, 60)">
+          <g class="stagger" style="animation-delay: 450ms">
+            ${drawIcon(iconPaths.repos)}
+            <text class="stat" x="${textX}" y="12.5">Total Repositories:</text>
+            <text class="stat" x="170" y="12.5" font-weight="600">${stats.totalRepositories}</text>
+          </g>
         </g>
-        <g class="stagger" style="animation-delay: 600ms" transform="translate(0, 90)">
-          ${drawIcon(iconPaths.followers)}
-          <text class="stat" x="${textX}" y="12.5">Followers:</text>
-          <text class="stat" x="170" y="12.5" font-weight="600">${stats.totalFollowers}</text>
+        <g transform="translate(0, 90)">
+          <g class="stagger" style="animation-delay: 600ms">
+            ${drawIcon(iconPaths.followers)}
+            <text class="stat" x="${textX}" y="12.5">Followers:</text>
+            <text class="stat" x="170" y="12.5" font-weight="600">${stats.totalFollowers}</text>
+          </g>
         </g>
       </g>
     </svg>
