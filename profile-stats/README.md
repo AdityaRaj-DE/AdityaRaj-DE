@@ -1,22 +1,22 @@
-# 📊 GitHub Profile Stats Service
+# GitHub Profile Stats Service
 
 A lightning-fast, production-ready microservice that generates beautiful, dynamically-rendered SVG stats cards for your GitHub profile README. 
 
-Built from scratch with **Node.js, Express, and the GitHub GraphQL API**, this service is designed as an open-source alternative to third-party stat generators. Host it yourself to gain full ownership, privacy, and customizability over your profile widgets!
+Built from scratch with Node.js, Express, and the GitHub GraphQL API, this service is designed as an open-source alternative to third-party stat generators. Host it yourself to gain full ownership, privacy, and customizability over your profile widgets!
 
 ---
 
-## ✨ Features
+## Features
 
-- **⚡ Blazing Fast SVGs**: SVGs are constructed mathematically via pure template strings—no heavy DOM parsing or Puppeteer headless browsers required.
-- **🔒 Full Privacy**: Run it on your own domain. Never share your GitHub Personal Access Token (PAT) with random third-party servers again.
-- **💾 Smart Caching**: Built-in memory cache (extensible to Redis) prevents API rate limits and keeps your widgets loading instantly.
-- **🎨 Theming System**: Easily define your own custom color palettes in a centralized configuration.
-- **🛠️ Clean Architecture**: Strict separation of concerns makes it trivially easy to extend and build your own custom widgets.
+- **Blazing Fast SVGs**: SVGs are constructed mathematically via pure template strings—no heavy DOM parsing or Puppeteer headless browsers required.
+- **Full Privacy**: Run it on your own domain. Never share your GitHub Personal Access Token (PAT) with random third-party servers again.
+- **Smart Caching**: Built-in memory cache (extensible to Redis) prevents API rate limits and keeps your widgets loading instantly.
+- **Theming System**: Easily define your own custom color palettes in a centralized configuration.
+- **Clean Architecture**: Strict separation of concerns makes it trivially easy to extend and build your own custom widgets.
 
 ---
 
-## 🚀 How to Build Your Own
+## How to Build Your Own
 
 You can deploy this service for free in less than 5 minutes using Vercel or Docker.
 
@@ -45,7 +45,7 @@ docker run -p 3000:3000 -e PORT=3000 -e GITHUB_TOKEN=your_token_here profile-sta
 
 ---
 
-## 💻 Usage
+## Usage
 
 Once deployed, simply embed the image links inside your `README.md`:
 
@@ -72,7 +72,7 @@ Once deployed, simply embed the image links inside your `README.md`:
 
 ---
 
-## 🏗️ Architecture & Codebase
+## Architecture & Codebase
 
 The codebase strictly follows Clean Architecture principles. If you want to contribute or build new widgets, everything is cleanly decoupled!
 
@@ -92,7 +92,7 @@ src/
 
 ---
 
-## 🛠️ Local Development
+## Local Development
 
 Want to test or tweak the code locally?
 
@@ -117,7 +117,7 @@ Want to test or tweak the code locally?
 
 ---
 
-## 📜 Environment Variables
+## Environment Variables
 
 | Variable | Description |
 |---|---|
