@@ -48,9 +48,9 @@ A containerized banking simulator focusing on data integrity. The core engineeri
 ---
 
 <a href="https://github.com/AdityaRaj-DE">
-  <img align="left" src="https://github-readme-stats.vercel.app/api?username=AdityaRaj-DE&theme=transparent&hide_border=true&show_icons=true&include_all_commits=true&count_private=true" height="130" alt="GitHub Stats" />
+  <img align="left" src="https://YOUR-DEPLOYED-APP-URL.com/api/stats.svg?username=AdityaRaj-DE&theme=transparent&hide_border=true&show_icons=true" height="130" alt="GitHub Stats" />
 </a>
 <a href="https://github.com/AdityaRaj-DE">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AdityaRaj-DE&theme=transparent&hide_border=true&layout=compact" height="130" alt="Top Languages" />
+  <img align="left" src="https://YOUR-DEPLOYED-APP-URL.com/api/languages.svg?username=AdityaRaj-DE&theme=transparent&hide_border=true" height="130" alt="Top Languages" />
 </a>
 <br clear="both" />
