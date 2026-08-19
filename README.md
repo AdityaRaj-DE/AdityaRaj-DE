@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://aditya-raj-de.vercel.app/api/v2/header.svg?username=AdityaRaj-DE" alt="Aditya Raj Header" />
+  <img src="https://aditya-raj-de.vercel.app/api/v2/header.svg?username=AdityaRaj-DE&v=2" alt="Aditya Raj Header" />
 </p>
 
 <p align="center">
