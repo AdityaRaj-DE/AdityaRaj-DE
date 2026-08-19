@@ -13,7 +13,7 @@ export function renderFooterCard(type: string, options: CardOptions): string {
   // Choose an accent color and URL based on the button type
   let accentColor = '#00ffcc'; // Default cyan
   let linkUrl = '#';
-  
+
   if (type === 'linkedin') {
     accentColor = '#3178c6'; // Blueish
     linkUrl = 'https://linkedin.com/in/aditya-raj-a030a0265';
