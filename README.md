@@ -2,19 +2,20 @@
   <img src="https://aditya-raj-de.vercel.app/api/v2/header.svg?username=AdityaRaj-DE" alt="Aditya Raj Header" />
 </p>
 
-## About
+<p align="center">
+  <img src="https://aditya-raj-de.vercel.app/api/v2/about.svg?username=AdityaRaj-DE" alt="About Me" />
+</p>
 
-I work professionally as a software developer handling full-stack applications, database architecture, and Google Cloud Platform deployments. Because my professional work is proprietary, this GitHub serves as a public portfolio of my personal projects. The repositories below demonstrate my approach to system design, containerization, and data handling.
-
-## Current Interests
-
-- Backend Engineering
-- Cloud Computing
-- System Design
-- Data Processing
+<p align="center">
+  <img src="https://aditya-raj-de.vercel.app/api/v2/interests.svg?username=AdityaRaj-DE" alt="Current Interests" />
+</p>
 
 <p align="center">
   <img src="https://aditya-raj-de.vercel.app/api/v2/tech-stack.svg?username=AdityaRaj-DE" alt="Tech Stack" />
+</p>
+
+<p align="center">
+  <img src="https://aditya-raj-de.vercel.app/api/v2/stats.svg?username=AdityaRaj-DE" alt="GitHub Stats" />
 </p>
 
 <p align="center">
