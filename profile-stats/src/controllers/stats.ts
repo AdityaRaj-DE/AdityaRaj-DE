@@ -10,7 +10,7 @@ export async function statsController(req: Request, res: Response) {
     }
 
     const svg = await getStatsSvg(options);
-    
+
     res.setHeader('Content-Type', 'image/svg+xml');
     res.setHeader('Cache-Control', 'public, max-age=3600');
     res.send(svg);
@@ -28,7 +28,7 @@ export async function languagesController(req: Request, res: Response) {
     }
 
     const svg = await getLanguagesSvg(options);
-    
+
     res.setHeader('Content-Type', 'image/svg+xml');
     res.setHeader('Cache-Control', 'public, max-age=3600');
     res.send(svg);

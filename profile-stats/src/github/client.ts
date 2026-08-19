@@ -7,9 +7,9 @@ async function fetchGraphQL(query: string, variables: Record<string, any>) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${config.githubToken}`,
+      Authorization: `Bearer ${config.githubToken}`
     },
-    body: JSON.stringify({ query, variables }),
+    body: JSON.stringify({ query, variables })
   });
 
   if (!response.ok) {
@@ -50,7 +50,7 @@ export async function fetchUserStats(username: string): Promise<GitHubStats> {
     totalFollowers: user.followers.totalCount,
     totalFollowing: user.following.totalCount,
     totalStars,
-    totalCommits,
+    totalCommits
   };
 }
 
@@ -63,7 +63,6 @@ export async function fetchUserLanguages(username: string): Promise<TopLanguages
   }
 
   const languageMap = new Map<string, LanguageStat>();
-  let totalSize = 0;
 
   if (user.repositories && user.repositories.nodes) {
     for (const repo of user.repositories.nodes) {
@@ -72,8 +71,6 @@ export async function fetchUserLanguages(username: string): Promise<TopLanguages
           const langSize = edge.size;
           const langName = edge.node.name;
           const langColor = edge.node.color || '#cccccc';
-
-          totalSize += langSize;
 
           if (languageMap.has(langName)) {
             const existing = languageMap.get(langName)!;
@@ -90,13 +87,13 @@ export async function fetchUserLanguages(username: string): Promise<TopLanguages
     .sort((a, b) => b.size - a.size)
     .slice(0, 5); // Return top 5 languages
 
-  // Recalculate total size based on the top 5 to show correct percentages among the top 5, 
+  // Recalculate total size based on the top 5 to show correct percentages among the top 5,
   // or use absolute total. Usually we use absolute total or just total of the top ones.
   // We'll use the totalSize of just the top languages so percentages add up to 100% of the displayed chart.
   const topTotalSize = languages.reduce((acc, curr) => acc + curr.size, 0);
 
   return {
     languages,
-    totalSize: topTotalSize,
+    totalSize: topTotalSize
   };
 }

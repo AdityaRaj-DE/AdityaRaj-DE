@@ -7,7 +7,7 @@ export function renderLanguagesCard(data: TopLanguages, options: CardOptions): s
 
   const height = 180;
   const width = 300;
-  
+
   let languagesHtml = '';
   let yOffset = 0;
 

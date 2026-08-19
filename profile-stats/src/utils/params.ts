@@ -5,6 +5,6 @@ export function parseCardOptions(query: Record<string, any>): CardOptions {
     username: query.username as string,
     theme: query.theme as string,
     hideBorder: query.hide_border === 'true',
-    showIcons: query.show_icons !== 'false', // default true, matches behavior requested if applicable
+    showIcons: query.show_icons !== 'false' // default true, matches behavior requested if applicable
   };
 }
