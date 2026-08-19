@@ -36,3 +36,10 @@ export interface CardOptions {
   hideBorder?: boolean;
   showIcons?: boolean;
 }
+
+export interface Project {
+  name: string;
+  description: string;
+  language: string;
+  languageColor: string;
+}
