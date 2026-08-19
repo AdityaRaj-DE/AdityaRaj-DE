@@ -3,6 +3,8 @@ export const userInfoQuery = `
     user(login: $login) {
       name
       login
+      avatarUrl
+      bio
       followers {
         totalCount
       }

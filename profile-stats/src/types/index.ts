@@ -1,6 +1,9 @@
 export interface GitHubStats {
   name: string;
   login: string;
+  avatarUrl: string;
+  avatarBase64?: string;
+  bio: string | null;
   totalRepositories: number;
   totalFollowers: number;
   totalFollowing: number;

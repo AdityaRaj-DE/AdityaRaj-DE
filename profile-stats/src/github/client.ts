@@ -46,6 +46,8 @@ export async function fetchUserStats(username: string): Promise<GitHubStats> {
   return {
     name: user.name || user.login,
     login: user.login,
+    avatarUrl: user.avatarUrl,
+    bio: user.bio,
     totalRepositories: user.repositories.totalCount,
     totalFollowers: user.followers.totalCount,
     totalFollowing: user.following.totalCount,
