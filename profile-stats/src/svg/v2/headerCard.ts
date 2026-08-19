@@ -9,8 +9,29 @@ export function renderHeaderCard(stats: GitHubStats, options: CardOptions): stri
   const avatarImage = stats.avatarBase64 || stats.avatarUrl;
   const bio = stats.bio || 'A mysterious GitHub user.';
 
-  // Truncate bio to fit in SVG
-  const shortBio = bio.length > 70 ? bio.substring(0, 67) + '...' : bio;
+  // Word wrap bio (max 55 chars per line)
+  const words = bio.split(' ');
+  const lines: string[] = [];
+  let currentLine = '';
+  for (const word of words) {
+    if ((currentLine + word).length > 55) {
+      lines.push(currentLine.trim());
+      currentLine = word + ' ';
+    } else {
+      currentLine += word + ' ';
+    }
+  }
+  if (currentLine.trim()) lines.push(currentLine.trim());
+
+  // Show up to 2 lines of bio
+  const displayLines = lines.slice(0, 2);
+  if (lines.length > 2) {
+    displayLines[1] = displayLines[1].replace(/.{3}$/, '...');
+  }
+
+  const bioSvg = displayLines
+    .map((line, i) => `<tspan x="180" dy="${i === 0 ? 0 : 20}">${line}</tspan>`)
+    .join('');
 
   return `
     <svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -87,13 +108,13 @@ export function renderHeaderCard(stats: GitHubStats, options: CardOptions): stri
         <text x="182" y="90" class="text-stats">@${stats.login}</text>
 
         <!-- Bio text -->
-        <text x="180" y="125" class="text-bio">${shortBio}</text>
+        <text x="180" y="125" class="text-bio">${bioSvg}</text>
         
         <!-- Stats summary in pixel style -->
-        <text x="180" y="160" class="text-stats">LVL ${Math.floor(stats.totalCommits / 100) + 1}</text>
-        <text x="340" y="160" class="text-bio">REPOS: ${stats.totalRepositories}</text>
-        <text x="500" y="160" class="text-bio">STARS: ${stats.totalStars}</text>
-        <text x="660" y="160" class="text-bio">FOLLOWS: ${stats.totalFollowers}</text>
+        <text x="180" y="170" class="text-stats">LVL ${Math.floor(stats.totalCommits / 100) + 1}</text>
+        <text x="340" y="170" class="text-bio">REPOS: ${stats.totalRepositories}</text>
+        <text x="500" y="170" class="text-bio">STARS: ${stats.totalStars}</text>
+        <text x="660" y="170" class="text-bio">FOLLOWS: ${stats.totalFollowers}</text>
       </g>
       
       <!-- Retro scanlines overlay -->
