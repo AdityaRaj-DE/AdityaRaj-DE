@@ -8,7 +8,10 @@ export function renderHeaderCard(stats: GitHubStats, options: CardOptions): stri
 
   // Base64 avatar or fallback to GitHub camo URL
   const avatarImage = stats.avatarBase64 || stats.avatarUrl;
-  const bio = stats.bio || 'A mysterious GitHub user.';
+  const escapeXml = (unsafe: string) =>
+    unsafe.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+
+  const bio = escapeXml(stats.bio || 'A mysterious GitHub user.');
 
   // Word wrap bio (max 55 chars per line)
   const words = bio.split(' ');
@@ -105,8 +108,8 @@ export function renderHeaderCard(stats: GitHubStats, options: CardOptions): stri
         <image x="30" y="30" width="120" height="120" href="${avatarImage}" clip-path="url(#avatar-clip)" class="avatar" />
 
         <!-- Title / Username -->
-        <text x="180" y="65" class="text-title">${stats.name}</text>
-        <text x="182" y="90" class="text-stats">@${stats.login}</text>
+        <text x="180" y="65" class="text-title">${escapeXml(stats.name || '')}</text>
+        <text x="182" y="90" class="text-stats">@${escapeXml(stats.login || '')}</text>
 
         <!-- Bio text -->
         <text x="180" y="125" class="text-bio">${bioSvg}</text>
