@@ -1,5 +1,6 @@
 import { TopLanguages, CardOptions } from '../../types';
 import { getTheme } from '../../themes';
+import { pressStart2PFont } from '../../utils/fonts';
 
 export function renderTechStackCard(data: TopLanguages, options: CardOptions): string {
   const theme = getTheme(options.theme);
@@ -39,7 +40,7 @@ export function renderTechStackCard(data: TopLanguages, options: CardOptions): s
   return `
     <svg width="800" height="${svgHeight}" viewBox="0 0 800 ${svgHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
       <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
+        ${pressStart2PFont}
         
         .bg { fill: #0d0d14; }
         .pixel-border { stroke-linecap: square; stroke-linejoin: miter; stroke: #333; stroke-width: 2; }

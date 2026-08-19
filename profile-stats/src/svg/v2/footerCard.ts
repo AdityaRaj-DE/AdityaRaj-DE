@@ -1,5 +1,6 @@
 import { CardOptions } from '../../types';
 import { getTheme } from '../../themes';
+import { pressStart2PFont } from '../../utils/fonts';
 
 export function renderFooterCard(type: string, options: CardOptions): string {
   const theme = getTheme(options.theme);
@@ -27,7 +28,7 @@ export function renderFooterCard(type: string, options: CardOptions): string {
   return `
     <svg width="250" height="60" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">
       <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
+        ${pressStart2PFont}
         
         .bg { fill: #0d0d14; transition: fill 0.3s ease; }
         .pixel-border { stroke-linecap: square; stroke-linejoin: miter; stroke: #333; stroke-width: 2; }
