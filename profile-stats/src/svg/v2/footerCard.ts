@@ -10,19 +10,15 @@ export function renderFooterCard(type: string, options: CardOptions): string {
   const labelText = type.toUpperCase();
   const title = `[ ${labelText} ]`;
 
-  // Choose an accent color and URL based on the button type
+  // Choose an accent color based on the button type
   let accentColor = '#00ffcc'; // Default cyan
-  let linkUrl = '#';
 
   if (type === 'linkedin') {
     accentColor = '#3178c6'; // Blueish
-    linkUrl = 'https://linkedin.com/in/aditya-raj-a030a0265';
   } else if (type === 'email') {
     accentColor = '#ffea00'; // Yellow
-    linkUrl = 'mailto:adityarajk2002@gmail.com';
   } else if (type === 'portfolio') {
     accentColor = '#ff00ff'; // Magenta
-    linkUrl = 'https://portfolio-aditya-raj.vercel.app/';
   }
 
   return `
@@ -56,7 +52,7 @@ export function renderFooterCard(type: string, options: CardOptions): string {
       </defs>
 
       <!-- Background -->
-      <a href="${linkUrl}" target="_blank">
+      <g>
         <rect width="250" height="60" class="bg" rx="0" ${border} />
         
         <!-- Button Text -->
@@ -64,7 +60,7 @@ export function renderFooterCard(type: string, options: CardOptions): string {
         
         <!-- Retro scanlines overlay -->
         <rect width="250" height="60" class="scanline" />
-      </a>
+      </g>
     </svg>
   `;
 }
