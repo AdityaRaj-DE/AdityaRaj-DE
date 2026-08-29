@@ -1,25 +1,25 @@
 <p align="center">
-  <a><img src="https://aditya-raj-de.vercel.app/api/v2/header.svg?username=AdityaRaj-DE&v=2" alt="Aditya Raj Header" /></a>
+  <a href="#"><img src="https://aditya-raj-de.vercel.app/api/v2/header.svg?username=AdityaRaj-DE&v=2" alt="Aditya Raj Header" /></a>
 </p>
 
 <p align="center">
-  <a><img src="https://aditya-raj-de.vercel.app/api/v2/about.svg?username=AdityaRaj-DE" alt="About Me" /></a>
+  <a href="#"><img src="https://aditya-raj-de.vercel.app/api/v2/about.svg?username=AdityaRaj-DE" alt="About Me" /></a>
 </p>
 
 <p align="center">
-  <a><img src="https://aditya-raj-de.vercel.app/api/v2/interests.svg?username=AdityaRaj-DE" alt="Current Interests" /></a>
+  <a href="#"><img src="https://aditya-raj-de.vercel.app/api/v2/interests.svg?username=AdityaRaj-DE" alt="Current Interests" /></a>
 </p>
 
 <p align="center">
-  <a><img src="https://aditya-raj-de.vercel.app/api/v2/tech-stack.svg?username=AdityaRaj-DE" alt="Tech Stack" /></a>
+  <a href="#"><img src="https://aditya-raj-de.vercel.app/api/v2/tech-stack.svg?username=AdityaRaj-DE" alt="Tech Stack" /></a>
 </p>
 
 <p align="center">
-  <a><img src="https://aditya-raj-de.vercel.app/api/v2/stats.svg?username=AdityaRaj-DE" alt="GitHub Stats" /></a>
+  <a href="#"><img src="https://aditya-raj-de.vercel.app/api/v2/stats.svg?username=AdityaRaj-DE" alt="GitHub Stats" /></a>
 </p>
 
 <p align="center">
-  <a><img src="https://aditya-raj-de.vercel.app/api/v2/projects.svg?username=AdityaRaj-DE" alt="Featured Projects" /></a>
+  <a href="#"><img src="https://aditya-raj-de.vercel.app/api/v2/projects.svg?username=AdityaRaj-DE" alt="Featured Projects" /></a>
 </p>
 
 ---
