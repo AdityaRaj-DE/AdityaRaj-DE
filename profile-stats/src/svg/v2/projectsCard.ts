@@ -79,6 +79,23 @@ export function renderProjectsCard(projects: Project[], options: CardOptions): s
           0% { opacity: 0; transform: translateX(-20px); }
           100% { opacity: 1; transform: translateX(0); }
         }
+
+        /* Twinkling stars animation */
+        .star { animation: twinkle 4s infinite ease-in-out; fill: #ffffff; }
+        .star:nth-child(even) { animation-duration: 3s; animation-delay: 1s; fill: #ffea00; }
+        .star:nth-child(3n) { animation-duration: 5s; animation-delay: 2s; fill: #00ffcc; }
+        
+        @keyframes twinkle {
+          0%, 100% { opacity: 0.2; }
+          50% { opacity: 1; }
+        }
+
+        /* Hover float effect on the main group */
+        .card-content { animation: float 6s ease-in-out infinite; transform-origin: center; }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-4px); }
+        }
         
         .scanline {
           fill: url(#scanline-pattern);
@@ -96,9 +113,23 @@ export function renderProjectsCard(projects: Project[], options: CardOptions): s
       <!-- Background -->
       <rect width="800" height="${svgHeight}" class="bg" rx="0" ${border} />
       
-      <text x="40" y="35" class="text-title">SELECT LEVEL (FEATURED PROJECTS)</text>
-      
-      ${cardsSvg}
+      <!-- Stars (Pixel art squares) -->
+      <g>
+        <rect class="star" x="700" y="40" width="4" height="4" />
+        <rect class="star" x="650" y="120" width="4" height="4" />
+        <rect class="star" x="500" y="30" width="4" height="4" />
+        <rect class="star" x="550" y="160" width="4" height="4" />
+        <rect class="star" x="300" y="80" width="4" height="4" />
+        <rect class="star" x="400" y="140" width="4" height="4" />
+        <rect class="star" x="200" y="50" width="4" height="4" />
+        <rect class="star" x="750" y="100" width="4" height="4" />
+      </g>
+
+      <g class="card-content">
+        <text x="40" y="35" class="text-title">SELECT LEVEL (FEATURED PROJECTS)</text>
+        
+        ${cardsSvg}
+      </g>
       
       <!-- Retro scanlines overlay -->
       <rect width="800" height="${svgHeight}" class="scanline" />
