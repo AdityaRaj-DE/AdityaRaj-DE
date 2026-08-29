@@ -10,15 +10,15 @@ export function renderFooterCard(type: string, options: CardOptions): string {
   const labelText = type.toUpperCase();
   const title = `[ ${labelText} ]`;
 
-  // Choose an accent color based on the button type
-  let accentColor = '#00ffcc'; // Default cyan
+  const isLight = options.theme === 'light';
+  let accentColor = isLight ? '#0088aa' : '#00ffcc'; // Default cyan
 
   if (type === 'linkedin') {
-    accentColor = '#3178c6'; // Blueish
+    accentColor = isLight ? '#1f5999' : '#3178c6'; // Blueish
   } else if (type === 'email') {
-    accentColor = '#ffea00'; // Yellow
+    accentColor = isLight ? '#cc9900' : '#ffea00'; // Yellow
   } else if (type === 'portfolio') {
-    accentColor = '#ff00ff'; // Magenta
+    accentColor = isLight ? '#aa00aa' : '#ff00ff'; // Magenta
   }
 
   return `
@@ -43,6 +43,11 @@ export function renderFooterCard(type: string, options: CardOptions): string {
           opacity: 0.15;
           pointer-events: none;
         }
+
+        ${options.theme === 'light' ? `
+        .bg { fill: #ffffff; }
+        .pixel-border { stroke: #cccccc; fill: #f9f9f9; }
+        ` : ''}
       </style>
 
       <defs>

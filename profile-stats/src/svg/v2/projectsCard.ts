@@ -102,6 +102,18 @@ export function renderProjectsCard(projects: Project[], options: CardOptions): s
           opacity: 0.15;
           pointer-events: none;
         }
+
+        ${options.theme === 'light' ? `
+        .bg { fill: #ffffff; }
+        .pixel-border { stroke: #cccccc; fill: #f9f9f9; }
+        .text-title { fill: #0055cc; text-shadow: 2px 2px #dddddd; }
+        .text-repo { fill: #aa7700; }
+        .text-desc { fill: #333333; }
+        .text-lang { fill: #555555; }
+        .star { fill: #e0e0e0; }
+        .star:nth-child(even) { fill: #d4af37; }
+        .star:nth-child(3n) { fill: #0088aa; }
+        ` : ''}
       </style>
 
       <defs>

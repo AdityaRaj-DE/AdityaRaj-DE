@@ -63,6 +63,16 @@ export function renderInterestsCard(options: CardOptions): string {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-4px); }
         }
+        
+        ${options.theme === 'light' ? `
+        .bg { fill: #ffffff; }
+        .pixel-border { stroke: #cccccc; fill: #f9f9f9; }
+        .text-title { fill: #0055cc; text-shadow: 2px 2px #dddddd; }
+        .text-item { fill: #aa7700; }
+        .star { fill: #e0e0e0; }
+        .star:nth-child(even) { fill: #d4af37; }
+        .star:nth-child(3n) { fill: #0088aa; }
+        ` : ''}
       </style>
 
       <defs>

@@ -80,6 +80,17 @@ export function renderTechStackCard(data: TopLanguages, options: CardOptions): s
           opacity: 0.15;
           pointer-events: none;
         }
+
+        ${options.theme === 'light' ? `
+        .bg { fill: #ffffff; }
+        .pixel-border { stroke: #cccccc; fill: #f9f9f9; }
+        .text-title { fill: #0055cc; text-shadow: 2px 2px #dddddd; }
+        .text-lang { fill: #333333; }
+        .text-percent { fill: #aa7700; }
+        .star { fill: #e0e0e0; }
+        .star:nth-child(even) { fill: #d4af37; }
+        .star:nth-child(3n) { fill: #0088aa; }
+        ` : ''}
       </style>
 
       <defs>

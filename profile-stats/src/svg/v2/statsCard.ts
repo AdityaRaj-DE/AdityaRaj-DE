@@ -6,10 +6,11 @@ export function renderStatsCard(stats: GitHubStats, options: CardOptions): strin
   const theme = getTheme(options.theme);
   const border = options.hideBorder ? '' : `stroke="${theme.borderColor}" stroke-width="4"`;
 
+  const isLight = options.theme === 'light';
   const statItems = [
-    { label: 'Total Stars', value: stats.totalStars, color: '#ffea00' },
-    { label: 'Total Commits', value: stats.totalCommits, color: '#00ffcc' },
-    { label: 'Repositories', value: stats.totalRepositories, color: '#ff00ff' },
+    { label: 'Total Stars', value: stats.totalStars, color: isLight ? '#cc9900' : '#ffea00' },
+    { label: 'Total Commits', value: stats.totalCommits, color: isLight ? '#0088aa' : '#00ffcc' },
+    { label: 'Repositories', value: stats.totalRepositories, color: isLight ? '#aa00aa' : '#ff00ff' },
     { label: 'Followers', value: stats.totalFollowers, color: '#3178c6' }
   ];
 
@@ -80,6 +81,16 @@ export function renderStatsCard(stats: GitHubStats, options: CardOptions): strin
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-4px); }
         }
+
+        ${options.theme === 'light' ? `
+        .bg { fill: #ffffff; }
+        .pixel-border { stroke: #cccccc; fill: #f9f9f9; }
+        .text-title { fill: #0055cc; text-shadow: 2px 2px #dddddd; }
+        .text-value { fill: #333333; }
+        .star { fill: #e0e0e0; }
+        .star:nth-child(even) { fill: #d4af37; }
+        .star:nth-child(3n) { fill: #0088aa; }
+        ` : ''}
       </style>
 
       <defs>
